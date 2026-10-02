@@ -1,0 +1,978 @@
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fc;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* =====================================================
+   IMPORTANT
+   Hides login, register, dashboard and modal sections
+===================================================== */
+
+.hidden {
+    display: none !important;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+
+/* =====================================================
+   GENERAL BUTTON
+===================================================== */
+
+.primary-button {
+    border: none;
+    background: linear-gradient(
+        135deg,
+        #6d3df5,
+        #4f2bd6
+    );
+    color: white;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.primary-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(91, 55, 220, 0.25);
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
+
+
+
+/* =====================================================
+   INTRO PAGE
+===================================================== */
+
+.intro-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(109, 61, 245, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #f8f9ff,
+            #ffffff
+        );
+}
+
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero-section {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(109, 61, 245, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(79, 43, 214, 0.08),
+            transparent 30%
+        );
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.hero-label {
+    color: #6d3df5;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.05;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+    color: #6d3df5;
+}
+
+.hero-description {
+    max-width: 650px;
+    margin: 0 auto 35px;
+
+    font-size: 19px;
+    color: #667085;
+}
+
+
+
+/* =====================================================
+   HOW IT WORKS
+===================================================== */
+
+.how-it-works {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 90px 25px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+.section-heading p:last-child {
+    color: #667085;
+    font-size: 17px;
+}
+
+
+
+/* =====================================================
+   STEPS
+===================================================== */
+
+.steps-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.step-card {
+    position: relative;
+
+    padding: 30px 25px;
+
+    min-height: 230px;
+
+    background: white;
+
+    border: 1px solid #e8e8f0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 30px rgba(31, 41, 55, 0.05);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #6d3df5;
+
+    box-shadow:
+        0 15px 35px rgba(109, 61, 245, 0.12);
+}
+
+.step-card.active {
+    border-color: #6d3df5;
+
+    box-shadow:
+        0 15px 35px rgba(109, 61, 245, 0.15);
+
+    transform: translateY(-5px);
+}
+
+.step-number {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f0ebff;
+
+    color: #6d3df5;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    margin-bottom: 22px;
+}
+
+.step-card.active .step-number {
+    background: #6d3df5;
+    color: white;
+}
+
+.step-card h3 {
+    font-size: 20px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.step-card p {
+    color: #667085;
+    font-size: 15px;
+}
+
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+.progress-container {
+    position: relative;
+
+    max-width: 800px;
+
+    margin: 50px auto 0;
+}
+
+.progress-line {
+    position: absolute;
+
+    top: 25px;
+    left: 7%;
+    right: 7%;
+
+    height: 3px;
+
+    background: #e5e7eb;
+
+    z-index: 0;
+}
+
+#progress-fill {
+    width: 0%;
+
+    height: 100%;
+
+    background: #6d3df5;
+
+    transition: width 0.3s ease;
+}
+
+.progress-dots {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+
+    z-index: 1;
+}
+
+.progress-dot {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: 3px solid #e5e7eb;
+
+    background: white;
+
+    color: #667085;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.progress-dot:hover {
+    border-color: #6d3df5;
+}
+
+.progress-dot.active {
+    background: #6d3df5;
+    color: white;
+    border-color: #6d3df5;
+}
+
+
+
+/* =====================================================
+   INTRO CTA
+===================================================== */
+
+.intro-cta {
+    text-align: center;
+
+    padding: 90px 20px 110px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f0ebff,
+            #ffffff
+        );
+}
+
+.intro-cta h2 {
+    font-size: 38px;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.intro-cta p {
+    color: #667085;
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+
+
+/* =====================================================
+   AUTHENTICATION PAGE
+===================================================== */
+
+.auth-container {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(109, 61, 245, 0.13),
+            transparent 35%
+        ),
+        #f7f8fc;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 460px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 20px 60px rgba(31, 41, 55, 0.10);
+}
+
+.back-button {
+    border: none;
+    background: transparent;
+
+    color: #6d3df5;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    padding: 0;
+
+    margin-bottom: 25px;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.auth-header h1 {
+    font-size: 38px;
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+.auth-header p {
+    color: #667085;
+}
+
+
+
+/* =====================================================
+   AUTH FORMS
+===================================================== */
+
+.auth-card h2 {
+    font-size: 28px;
+    color: #111827;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #374151;
+
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+#search-input,
+#status-filter {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #d9dce5;
+
+    border-radius: 9px;
+
+    background: white;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+#search-input:focus,
+#status-filter:focus {
+    border-color: #6d3df5;
+
+    box-shadow:
+        0 0 0 3px rgba(109, 61, 245, 0.10);
+}
+
+.auth-card .primary-button {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.auth-message {
+    min-height: 22px;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    color: #dc2626;
+}
+
+.auth-switch {
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #667085;
+
+    font-size: 14px;
+}
+
+.auth-switch button {
+    border: none;
+
+    background: transparent;
+
+    color: #6d3df5;
+
+    font-weight: 700;
+
+    margin-left: 5px;
+}
+
+.auth-switch button:hover {
+    text-decoration: underline;
+}
+
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+#dashboard-container {
+    min-height: 100vh;
+    background: #f7f8fc;
+}
+
+.dashboard-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 50px;
+
+    background: white;
+
+    border-bottom: 1px solid #e7e8ef;
+}
+
+.dashboard-header h1 {
+    color: #111827;
+    font-size: 30px;
+}
+
+.dashboard-header p {
+    color: #667085;
+    font-size: 14px;
+}
+
+.logout-button {
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    background: #111827;
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background: #374151;
+}
+
+
+
+/* =====================================================
+   DASHBOARD CONTENT
+===================================================== */
+
+.dashboard-content {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 40px 25px;
+}
+
+.dashboard-actions {
+    display: grid;
+
+    grid-template-columns:
+        auto
+        1fr
+        220px;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.dashboard-actions > button {
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 9px;
+
+    background: #6d3df5;
+
+    color: white;
+
+    font-weight: 700;
+}
+
+.dashboard-actions > button:hover {
+    background: #5930dc;
+}
+
+
+
+/* =====================================================
+   APPLICATION CARDS
+===================================================== */
+
+#applications-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.application-card {
+    background: white;
+
+    border: 1px solid #e7e8ef;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 7px 25px rgba(31, 41, 55, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.application-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(31, 41, 55, 0.09);
+}
+
+.application-card h3 {
+    font-size: 20px;
+
+    color: #111827;
+
+    margin-bottom: 5px;
+}
+
+.application-card .job-title {
+    color: #667085;
+
+    margin-bottom: 15px;
+}
+
+.status-badge {
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    background: #f0ebff;
+
+    color: #6d3df5;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.application-card p {
+    color: #667085;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+.application-card strong {
+    color: #374151;
+}
+
+.application-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.edit-button,
+.delete-button {
+    border: none;
+
+    padding: 8px 14px;
+
+    border-radius: 7px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.edit-button {
+    background: #eeeaff;
+
+    color: #5b35d8;
+}
+
+.delete-button {
+    background: #fee2e2;
+
+    color: #dc2626;
+}
+
+.edit-button:hover {
+    background: #ddd5ff;
+}
+
+.delete-button:hover {
+    background: #fecaca;
+}
+
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(15, 23, 42, 0.55);
+
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 550px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.20);
+}
+
+.close-button {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: #f3f4f6;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+
+    color: #374151;
+}
+
+.close-button:hover {
+    background: #e5e7eb;
+}
+
+.modal-content h2 {
+    margin-bottom: 25px;
+
+    color: #111827;
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .steps-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    #applications-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .dashboard-actions {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dashboard-actions > button {
+        grid-column: span 2;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+
+    .hero-section {
+        min-height: 520px;
+
+        padding: 60px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .how-it-works {
+        padding: 60px 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+
+    .step-card {
+        min-height: auto;
+    }
+
+    .progress-container {
+        margin-top: 35px;
+    }
+
+    .progress-line {
+        display: none;
+    }
+
+    .progress-dots {
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .intro-cta {
+        padding: 70px 20px;
+    }
+
+    .intro-cta h2 {
+        font-size: 30px;
+    }
+
+    .auth-card {
+        padding: 30px 22px;
+    }
+
+    .dashboard-header {
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .dashboard-content {
+        padding: 25px 15px;
+    }
+
+    .dashboard-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-actions > button {
+        grid-column: auto;
+    }
+
+    #applications-container {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        padding: 28px 20px;
+    }
+}

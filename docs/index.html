@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JobTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         INTRO PAGE
+    ====================================================== -->
+
+    <section id="intro-page" class="intro-page">
+
+        <!-- HERO -->
+
+        <div class="hero-section">
+
+            <div class="hero-content">
+
+                <p class="hero-label">
+                    JOB APPLICATION TRACKER
+                </p>
+
+                <h1>
+                    Welcome to <span>JobTrack</span>
+                </h1>
+
+                <p class="hero-description">
+                    Organize your job applications, track your progress,
+                    and stay focused throughout your job search.
+                </p>
+
+                <button
+                    type="button"
+                    id="get-started-button"
+                    class="primary-button"
+                >
+                    Get Started
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             HOW JOBTRACK WORKS
+        ================================================== -->
+
+        <section class="how-it-works">
+
+            <div class="section-heading">
+
+                <p class="hero-label">
+                    SIMPLE & ORGANIZED
+                </p>
+
+                <h2>
+                    How JobTrack Works
+                </h2>
+
+                <p>
+                    Manage your entire job application journey
+                    in four simple steps.
+                </p>
+
+            </div>
+
+
+            <!-- STEPS -->
+
+            <div class="steps-container">
+
+                <!-- STEP 1 -->
+
+                <div
+                    class="step-card active"
+                    data-step="1"
+                >
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Create Account
+                    </h3>
+
+                    <p>
+                        Create your JobTrack account
+                        to get started.
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 2 -->
+
+                <div
+                    class="step-card"
+                    data-step="2"
+                >
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Add Applications
+                    </h3>
+
+                    <p>
+                        Add the companies and jobs
+                        you have applied to.
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 3 -->
+
+                <div
+                    class="step-card"
+                    data-step="3"
+                >
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Track Progress
+                    </h3>
+
+                    <p>
+                        Keep track of interviews,
+                        selections, and rejections.
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 4 -->
+
+                <div
+                    class="step-card"
+                    data-step="4"
+                >
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Stay Organized
+                    </h3>
+
+                    <p>
+                        Keep all your job applications
+                        organized in one place.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+
+            <div class="progress-container">
+
+                <div class="progress-line">
+
+                    <div id="progress-fill"></div>
+
+                </div>
+
+                <div class="progress-dots">
+
+                    <button
+                        type="button"
+                        class="progress-dot active"
+                        data-step="1"
+                    >
+                        1
+                    </button>
+
+                    <button
+                        type="button"
+                        class="progress-dot"
+                        data-step="2"
+                    >
+                        2
+                    </button>
+
+                    <button
+                        type="button"
+                        class="progress-dot"
+                        data-step="3"
+                    >
+                        3
+                    </button>
+
+                    <button
+                        type="button"
+                        class="progress-dot"
+                        data-step="4"
+                    >
+                        4
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BOTTOM CTA
+        ================================================== -->
+
+        <section class="intro-cta">
+
+            <h2>
+                Ready to organize your job search?
+            </h2>
+
+            <p>
+                Start tracking your applications today.
+            </p>
+
+            <button
+                type="button"
+                id="intro-start-button"
+                class="primary-button"
+            >
+                Start Tracking
+            </button>
+
+        </section>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         AUTHENTICATION
+    ====================================================== -->
+
+    <div
+        id="auth-container"
+        class="auth-container hidden"
+    >
+
+        <div class="auth-card">
+
+
+            <!-- BACK TO INTRO -->
+
+            <button
+                type="button"
+                id="back-to-intro"
+                class="back-button"
+            >
+                ← Back
+            </button>
+
+
+            <!-- AUTH HEADER -->
+
+            <div class="auth-header">
+
+                <h1>
+                    JobTrack
+                </h1>
+
+                <p>
+                    Manage your job applications in one place
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 LOGIN
+            ================================================== -->
+
+            <div id="login-section">
+
+                <h2>
+                    Welcome Back
+                </h2>
+
+
+                <form id="login-form">
+
+                    <div class="form-group">
+
+                        <label for="login-email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="login-email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="login-password">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="login-password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        Login
+                    </button>
+
+                </form>
+
+
+                <p
+                    id="login-message"
+                    class="auth-message"
+                ></p>
+
+
+                <p class="auth-switch">
+
+                    Don't have an account?
+
+                    <button
+                        type="button"
+                        id="show-register"
+                    >
+                        Create Account
+                    </button>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 REGISTER
+            ================================================== -->
+
+            <div
+                id="register-section"
+                class="hidden"
+            >
+
+                <h2>
+                    Create Account
+                </h2>
+
+
+                <form id="register-form">
+
+
+                    <div class="form-group">
+
+                        <label for="register-name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="register-name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="register-email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="register-email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="register-password">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="register-password"
+                            placeholder="Minimum 6 characters"
+                            minlength="6"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        Create Account
+                    </button>
+
+                </form>
+
+
+                <p
+                    id="register-message"
+                    class="auth-message"
+                ></p>
+
+
+                <p class="auth-switch">
+
+                    Already have an account?
+
+                    <button
+                        type="button"
+                        id="show-login"
+                    >
+                        Login
+                    </button>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         DASHBOARD
+    ====================================================== -->
+
+    <div
+        id="dashboard-container"
+        class="hidden"
+    >
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    JobTrack
+                </h1>
+
+                <p id="welcome-message"></p>
+
+            </div>
+
+
+            <button
+                id="logout-button"
+                class="logout-button"
+                type="button"
+            >
+                Logout
+            </button>
+
+        </header>
+
+
+
+        <main class="dashboard-content">
+
+
+            <!-- SEARCH / FILTER / ADD -->
+
+            <section class="dashboard-actions">
+
+
+                <button
+                    id="add-application-button"
+                    type="button"
+                >
+                    + Add Application
+                </button>
+
+
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search applications..."
+                >
+
+
+                <select id="status-filter">
+
+                    <option value="">
+                        All Statuses
+                    </option>
+
+                    <option value="Applied">
+                        Applied
+                    </option>
+
+                    <option value="Interview">
+                        Interview
+                    </option>
+
+                    <option value="Interview Scheduled">
+                        Interview Scheduled
+                    </option>
+
+                    <option value="Selected">
+                        Selected
+                    </option>
+
+                    <option value="Rejected">
+                        Rejected
+                    </option>
+
+                </select>
+
+            </section>
+
+
+
+            <!-- APPLICATION CARDS -->
+
+            <section
+                id="applications-container"
+            ></section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ADD / EDIT APPLICATION MODAL
+    ====================================================== -->
+
+    <div
+        id="application-modal"
+        class="modal hidden"
+    >
+
+        <div class="modal-content">
+
+
+            <button
+                id="close-modal"
+                class="close-button"
+                type="button"
+            >
+                ×
+            </button>
+
+
+            <h2 id="modal-title">
+                Add Application
+            </h2>
+
+
+            <form id="application-form">
+
+
+                <!-- Hidden ID -->
+
+                <input
+                    type="hidden"
+                    id="application-id"
+                >
+
+
+                <!-- COMPANY -->
+
+                <div class="form-group">
+
+                    <label for="company-name">
+                        Company Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="company-name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- JOB TITLE -->
+
+                <div class="form-group">
+
+                    <label for="job-title">
+                        Job Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="job-title"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- STATUS -->
+
+                <div class="form-group">
+
+                    <label for="application-status">
+                        Status
+                    </label>
+
+                    <select
+                        id="application-status"
+                        required
+                    >
+
+                        <option value="Applied">
+                            Applied
+                        </option>
+
+                        <option value="Interview">
+                            Interview
+                        </option>
+
+                        <option value="Interview Scheduled">
+                            Interview Scheduled
+                        </option>
+
+                        <option value="Selected">
+                            Selected
+                        </option>
+
+                        <option value="Rejected">
+                            Rejected
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="form-group">
+
+                    <label for="location">
+                        Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- APPLICATION DATE -->
+
+                <div class="form-group">
+
+                    <label for="application-date">
+                        Application Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="application-date"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- SAVE -->
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    Save Application
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
