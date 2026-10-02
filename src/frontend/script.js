@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:8080/api";
+const API_BASE_URL = "https://jobtrack-job-application-manager.onrender.com/api";
 const APPLICATIONS_URL = `${API_BASE_URL}/applications`;
 const AUTH_URL = `${API_BASE_URL}/auth`;
 
